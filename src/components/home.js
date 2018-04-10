@@ -501,9 +501,18 @@ class Home extends Component {
 			          	<div className="mt-20">
 					       	<Card style={{paddingTop:"5px"}} className="homeCard">
 						        <CardMedia overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}>
+						        <div className="col-md-4">
+						        <img src={"img/"+pokeDetails.name+".png"} className="float-right" height="80" width="auto" alt="bulbasaur" />
+				      			</div>
+				      			<div className="col-md-4">
 				      				<img src={"img/"+pokeDetails.name+".png"} className="center-align" height="180" width="auto" alt="bulbasaur" />
+				      			</div>
+				      			<div className="col-md-4">
+				      			<img src={"img/"+pokeDetails.name+".png"} className="" height="80" width="auto" alt="bulbasaur" />
+						        </div>
 						        </CardMedia>
 						        <CardContent>
+						        <div className="col-md-12">
 						          <Typography gutterBottom variant="headline" component="h2">
 						            <span className="color-primary">{pokeDetails.name.toUpperCase()}</span>
 						            <span className="fontSize-20 color-secondary float-right">
@@ -512,11 +521,12 @@ class Home extends Component {
 								       group_work
 								    </Icon>
 						          </Typography>
+						          </div>
 						          <Table>
 							        <TableBody>
 							              <TableRow>
 							                <TableCell>Weight:</TableCell>
-							                <TableCell numeric><Progress color="#a4c3f7" className="bg-color-primary" completed={pokeDetails.weight} /></TableCell>
+							                <TableCell numeric><Progress color="#a4c3f7" completed={pokeDetails.weight} /></TableCell>
 							                <TableCell numeric>{pokeDetails.weight}</TableCell>
 							              </TableRow>
 							              <TableRow>
@@ -553,7 +563,7 @@ class Home extends Component {
 							      </Table>
 						        </CardContent>
 						        <CardActions>
-						          <Button onClick={this.sendPokemon.bind(this, pokeDetails)} style={{marginRight:"auto", marginLeft:"auto"}} variant="raised" color="primary">
+						          <Button onClick={this.sendPokemon.bind(this, pokeDetails)} style={{marginRight:"auto", marginLeft:"auto", background:"#4285F4"}} variant="raised" color="primary">
 								      Catch {pokeDetails.name} Now
 								      <Icon className="ml-5">send</Icon>
 								  </Button>

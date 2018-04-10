@@ -1,10 +1,10 @@
 import { GET_POKEMONS, CATCH_POKEMONS } from '../actions/types';
 import _ from 'lodash';
 
-export default function(state = {pokemons:[]}, action) {
+export default function(state = {backpackPoke:[]}, action) {
 	switch(action.type) {
 		case CATCH_POKEMONS:
-		  return { ...state, backpackPoke: _.uniq([...state.pokemons,action.payload ], 'name') };
+		  return { ...state, backpackPoke: _.uniq([...state.backpackPoke,action.payload ], 'name') };
 	  }
 
 	return state;

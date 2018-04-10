@@ -21,11 +21,36 @@ class BackPack extends Component {
         	<Header/>
         	<div className="row">
         	<div className="col-md-12 col-sm-12 col-xs-12">
+        	{!this.props.gotPokemon || (this.props.gotPokemon && this.props.gotPokemon.length==0) &&
+        			<div>
+        			<img src="img/empty.png" className="center-align" height="500" width="auto" alt="bulbasaur" />
+        			</div>
+        	}
+
+        		{this.props.gotPokemon && this.props.gotPokemon.length>0 &&
+		        	<div className="row">
+		        	<div className="col-md-12 col-sm-12 col-xs-12">
+			        	<div className="col-md-3">
+			        	</div>
+			        	<div className="col-md-2">
+			        	<img src="img/gotcha.png" className="ml-5 float-right" height="80" width="auto" alt="pokemon_image" />
+			        	</div>
+			        	<div className="col-md-4">
+			        	<Typography utterBottom variant="headline" component="h2" style={{marginTop:"20px"}}>
+			        	You Got {this.props.gotPokemon.length} Pokemon! </Typography>
+			        	</div>
+			        	<div className="col-md-3">
+			        	</div>
+		        	</div>
+		        	</div>
+		        }
+
         	    {this.props.gotPokemon && this.props.gotPokemon.length>0 && this.props.gotPokemon.map((pokemon) => {
-		        	return <div className="col-md-3 col-sm-6 col-xs-12 mt-20">
+		        	return <div>
+		        	<div className="col-md-3 col-sm-6 col-xs-12 mt-20">
 			       	<Card style={{maxWidth:"345px", paddingTop:"5px"}} className="homeCard">
 				        <CardMedia overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}>
-		      				<img src={"img/"+pokemon.name+".png"} className="center-align" height="180" width="auto" alt="bulbasaur" />
+		      				<img src={"img/"+pokemon.name+".png"} className="center-align" height="180" width="auto" alt="pokemon_image" />
 				        </CardMedia>
 				        <CardContent>
 				          <Typography gutterBottom variant="headline" component="h2">
@@ -57,14 +82,13 @@ class BackPack extends Component {
 				          </Typography>
 				        </CardContent>
 				        <CardActions>
-				          <Button size="small" color="primary">
-				            <img className="" src="img/mystic.png" alt="details"/> More Details
-				          </Button>
-				          <Button size="small" color="primary">
-				            <img className="" src="img/fight.png" alt="compare"/> Fight Pokemon
-				          </Button>
+				        	<img className="" src="img/fight.png" alt="compare"/>
+				            <img className="" src="img/mystic.png" alt="details"/>
+				            <img className="" src="img/fight.png" alt="compare"/>
+				            <img className="" src="img/fight.png" alt="compare"/>
 				        </CardActions>
 				      </Card>
+				      </div>
 				      </div>
 				     })
                  }

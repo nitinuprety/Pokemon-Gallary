@@ -22,7 +22,7 @@ class DashBoard extends Component {
 		       	<Card className="homeCard">
 			        <CardContent>
 			          <Typography gutterBottom variant="headline" component="h2">
-			            About Pokemon-Gallary
+			           <img className="mb-5" src="img/pokeball.png" alt="compare"/> About Pokemon-Gallary
 			          </Typography>
 			          <Typography component="p">
 			            Top 52 Pokemons with the Features of Comparison, Sort and Backpack
@@ -30,10 +30,10 @@ class DashBoard extends Component {
 			        </CardContent>
 			        <CardActions>
 			          <Button size="small" color="primary">
-			            By Nitin Uprety
+			            By Nitin Uprety with <img className="ml-5" height="32" src="img/heart.png" alt="compare"/>
 			          </Button>
 			          <Button href="https://github.com/nitinuprety" size="small" color="primary">
-			            GitHub Page
+			            GitHub Page <img className="ml-5" height="32" src="img/pokebag.png" alt="compare"/>
 			          </Button>
 			        </CardActions>
 			    </Card>
