@@ -7,6 +7,8 @@ import Card, { CardTitle, CardActions, CardContent, CardMedia } from 'material-u
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import Header from './header';
+import Progress from 'react-progressbar'
+import Table, { TableBody, TableCell, TableHead, TableRow } from 'material-ui/Table';
 
 
 class BackPack extends Component {
@@ -53,40 +55,52 @@ class BackPack extends Component {
 		      				<img src={"img/"+pokemon.name+".png"} className="center-align" height="180" width="auto" alt="pokemon_image" />
 				        </CardMedia>
 				        <CardContent>
-				          <Typography gutterBottom variant="headline" component="h2">
+				        <Typography gutterBottom variant="headline" component="h2">
 				            <span className="color-primary">{pokemon.name.toUpperCase()}</span>
 				            <span className="fontSize-20 color-secondary float-right">
 				            {pokemon.stats[5].stat.name.toUpperCase()}: {pokemon.stats[5].base_stat}</span>
 				            <img height="25" className="float-right mr-5 mt-3" src="img/open-pokeball.png" alt="compare"/>
 				          </Typography>
-				          <Typography component="p">
-				            Weight: {pokemon.weight}
-				          </Typography>
-				          <Typography component="p">
-				            Height: {pokemon.height}
-				          </Typography>
-				          <Typography component="p">
-				            {pokemon.stats[0].stat.name}: {pokemon.stats[0].base_stat}
-				          </Typography>
-				          <Typography component="p">
-				            {pokemon.stats[1].stat.name}: {pokemon.stats[1].base_stat}
-				          </Typography>
-				          <Typography component="p">
-				            {pokemon.stats[2].stat.name}: {pokemon.stats[2].base_stat}
-				          </Typography>
-				          <Typography component="p">
-				            {pokemon.stats[3].stat.name}: {pokemon.stats[3].base_stat}
-				          </Typography>
-				          <Typography component="p">
-				            {pokemon.stats[4].stat.name}: {pokemon.stats[4].base_stat}
-				          </Typography>
+						          <Table>
+							        <TableBody>
+							              <TableRow>
+							                <TableCell>Weight:</TableCell>
+							                <TableCell numeric>{pokemon.weight}</TableCell>
+							              </TableRow>
+							              <TableRow>
+							                <TableCell>Height:</TableCell>
+							                <TableCell numeric>{pokemon.height}</TableCell>
+							              </TableRow>
+							              <TableRow>
+							                <TableCell>{pokemon.stats[0].stat.name.replace(/\b\w/g, l => l.toUpperCase())}:</TableCell>
+							                <TableCell numeric>{pokemon.stats[0].base_stat}</TableCell>
+							              </TableRow>
+							              <TableRow>
+							                <TableCell>{pokemon.stats[1].stat.name.replace(/\b\w/g, l => l.toUpperCase())}:</TableCell>
+							                <TableCell numeric>{pokemon.stats[1].base_stat}</TableCell>
+							              </TableRow>
+							              <TableRow>
+							                <TableCell>{pokemon.stats[2].stat.name.replace(/\b\w/g, l => l.toUpperCase())}:</TableCell>
+							                <TableCell numeric>{pokemon.stats[2].base_stat}</TableCell>
+							              </TableRow>
+							              <TableRow>
+							                <TableCell>{pokemon.stats[3].stat.name.replace(/\b\w/g, l => l.toUpperCase())}:</TableCell>
+							                <TableCell numeric>{pokemon.stats[3].base_stat}</TableCell>
+							              </TableRow>
+							              <TableRow>
+							                <TableCell>{pokemon.stats[4].stat.name.replace(/\b\w/g, l => l.toUpperCase())}:</TableCell>
+							                <TableCell numeric>{pokemon.stats[4].base_stat}</TableCell>
+							              </TableRow>
+							        </TableBody>
+							      </Table>
 				        </CardContent>
-				        <CardActions>
-				        	<img className="" src="img/fight.png" alt="compare"/>
-				            <img className="" src="img/mystic.png" alt="details"/>
-				            <img className="" src="img/fight.png" alt="compare"/>
-				            <img className="" src="img/fight.png" alt="compare"/>
-				        </CardActions>
+					        <CardActions>
+					          <Button size="small" color="primary">
+					            <img className="" src="img/egg-incubator.png" alt="details"/> 
+					            <span>Base Experience :</span> 
+					            <span style={{marginLeft:"70px"}}>{pokemon.base_experience}</span>
+					          </Button>
+					        </CardActions>
 				      </Card>
 				      </div>
 				      </div>
