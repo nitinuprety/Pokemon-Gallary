@@ -204,9 +204,6 @@ class Home extends Component {
 			            onChange={this.handleChange.bind(this)}
 			            input={<Input name="sort" id="age-helper" />}
 			          >
-			            <MenuItem value="">
-			              <em>Default</em>
-			            </MenuItem>
 			            <MenuItem value='stats[5].base_stat'>HP</MenuItem>
 			            <MenuItem value='stats[0].base_stat'>Speed</MenuItem>
 			            <MenuItem value='stats[4].base_stat'>Attack</MenuItem>
@@ -486,7 +483,7 @@ class Home extends Component {
 			          onClose={this.handleCloseModal}
 			          transition={Transition}
 			        >
-			          <AppBar style={{position:"relative"}}>
+			          <AppBar style={{position:"relative", background:"#4285F4"}}>
 			            <Toolbar>
 			              <Typography variant="title" color="inherit" className="flex-1">
 			                <img className="" height="42" src="img/pointer.png" alt="close"/>

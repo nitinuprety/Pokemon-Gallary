@@ -22,7 +22,7 @@ class DashBoard extends Component {
 		       	<Card className="homeCard">
 			        <CardContent>
 			          <Typography gutterBottom variant="headline" component="h2">
-			           <img className="mb-5" src="img/pokeball.png" alt="compare"/> About Pokemon-Gallary
+			           <img className="mb-5" src="img/pokeball.png" alt="compare"/> About Pokemon-Gallery
 			          </Typography>
 			          <Typography component="p">
 			            Top 52 Pokemons with the Features of Comparison, Sort and Backpack

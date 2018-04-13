@@ -19,7 +19,7 @@ class SearchBar extends Component {
 	        <Toolbar className="bg-color-primary">
 			  <img className="mr-10" src="img/superball.png"/>
 	          <Typography variant="title" color="inherit" className="flex-1">
-			    Pokemon Gallary
+			    Pokemon Gallery
 	          </Typography>
 	          <Link to="/home" className="no-underline color-white">
 	          	<Button color="inherit">Home</Button>
