@@ -1,25 +1,29 @@
-# ReduxSimpleStarter
+# Pokemon Gallery
 
-Interested in learning [Redux](https://www.udemy.com/react-redux/)?
+Pokemon Gallery app built with React.js
+
+### Version
+
+1.0.0
+
+### Built Using
+
+- React.js
+- React-Router
+- Axios
+- Material-UI
 
 ### Getting Started
 
-There are two methods for getting started with this repo.
+Clone the Project.
 
 #### Familiar with Git?
 Checkout this repo, install dependencies, then start the gulp process with the following:
 
 ```
-> git clone https://github.com/StephenGrider/ReduxSimpleStarter.git
-> cd ReduxSimpleStarter
+> git clone https://github.com/nitinuprety/Pokemon-Gallery.git
+> cd Pokemon-Gallery
 > npm install
 > npm start
 ```
 
-#### Not Familiar with Git?
-Click [here](https://github.com/StephenGrider/ReactStarter/releases) then download the .zip file.  Extract the contents of the zip file, then open your terminal, change to the project directory, and:
-
-```
-> npm install
-> npm start
-```
