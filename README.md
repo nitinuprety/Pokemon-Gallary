@@ -1,8 +1,8 @@
 # Pokemon Gallery
 
-Pokemon Gallery app built with React.js
+Pokemon Gallery app build with React.js
 
-# Demo
+## Demo
 
 http://pokemongallery.s3-website.ap-south-1.amazonaws.com
 
