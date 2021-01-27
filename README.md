@@ -1,6 +1,6 @@
 # Pokemon Gallery
 
-Pokemon Gallery app build with React.js
+Pokemon Gallery with features like filter, sort and collection built with React.js
 
 ## Demo
 
